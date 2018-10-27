@@ -13,7 +13,8 @@ import android.webkit.WebViewClient;
 public class MainActivity extends AppCompatActivity {
 
     private String TAG = MainActivity.class.getSimpleName();
-    private String END_URL="https://www.google.com";
+    //private String END_URL="http://yechuri-001-site1.ctempurl.com/homeapp/Default.aspx";
+    private String END_URL="http://www.google.com";
     private WebView mWebView;
 
     @Override
@@ -55,6 +56,15 @@ public class MainActivity extends AppCompatActivity {
                     | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
                     | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
 
+        }
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (mWebView.canGoBack()) {
+            mWebView.goBack();
+        } else {
+            super.onBackPressed();
         }
     }
 }
