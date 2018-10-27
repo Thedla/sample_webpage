@@ -13,7 +13,6 @@ import android.webkit.WebViewClient;
 public class MainActivity extends AppCompatActivity {
 
     private String TAG = MainActivity.class.getSimpleName();
-    //private String END_URL="http://yechuri-001-site1.ctempurl.com/homeapp/Default.aspx";
     private String END_URL="http://www.google.com";
     private WebView mWebView;
 
